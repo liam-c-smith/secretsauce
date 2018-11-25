@@ -8,10 +8,11 @@ Authors@R:
            email = "liam.c.smith@protonmail.com")
 Description: This is a collection of miscellaneous functions
     which I use often in my work as an analyst in the insurance industry.
-License:  MIT + file LICENSE
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
-  ggplot2,
-  boot,
-  lubridate
+    ggplot2,
+    boot,
+    lubridate
+RoxygenNote: 6.1.1
