@@ -23,7 +23,7 @@ age_to_band <- function(x, width = 5, style = "bracket",
   }
 
   if (!(style %in% c("bracket", "hyphen"))){
-    stop("`style = \"", style, \"` is not recognised. Please use either \"bracket\" or \"hyphen\".")
+    stop("`style = '", style, "'` is not recognised. Please use either 'bracket' or 'hyphen'.")
   }
 
   # Warn of peculiarities
