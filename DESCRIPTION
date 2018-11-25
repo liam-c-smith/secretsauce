@@ -7,3 +7,5 @@ Depends: R (>= 3.5.1)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+URL: http://github.com/liam-c-smith/secretsauce
+BugReports: http://github.com/liam-c-smith/secretsauce
