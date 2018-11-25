@@ -1,3 +1,46 @@
+#' Convert ages to age-bands
+#'
+#' Use \code{age_to_band()} to bin ages (measured in years) into regularly spaced
+#' intervals with options for grouping values above or below given thresholds. Intervals
+#' are closed on the right and open on the left.
+#'
+#' @param x A numeric vector of non-negative values representing ages.
+#' @param width An integer specifying the size of the interval for binning. Must be
+#'   greater than or equal to 2 for meaningful age bands.
+#' @param style A string specifying the format of labels assigned to the bins. \code{style
+#'   = "bracket"} provides mathmatical interval notation, e.g. "[5, 10)", whereas
+#'   \code{style = "hyphen"} provides integer limits separated by a hyphen, e.g. "5-9".
+#'   While the hyphen-style format is less precise mathmatically, it may be more intuitive
+#'   for audiences without a mathmatical background.
+#' @param group_below,group_above An integer specifying end group thresholds. Must be a
+#'   multiple of \code{width}. This is sometimes helpful when younger or older ages should
+#'   be collected into wider intervals groups groups. E.g. \code{width = 5} and
+#'   \code{group_below = 15} puts every age below 15 into a wider bin of size [0, 15) then
+#'   5-year bands proceed from there: [15, 20), [20, 25), [25, 30), etc..
+#'
+#' @return An ordered factor with labels determined by \code{style}. Bands that don't
+#'   appear in the data are still included as levels in the resulting factor.
+#'
+#' @examples
+#' # Generate non-negative data
+#' x <- runif(20, 0, 100)
+#' age_to_band(x)              # 5-year age bands (the default)
+#' age_to_band(x, width = 20)  # 20-year age bands
+#'
+#' # The ordered factor output ensures the bands are
+#' # appropriately ordered and that bands not present
+#' # in the data are still included. This might otherwise lead to
+#' # undesireable plot results.
+#' y <- c(runif(10, 0, 20), runif(10, 30, 50))
+#' plot(table(age_to_band(y)))
+#'
+#' # `style = "bracket"` and `style = "hyphen"` have
+#' # different labels when grouping the ends
+#' z <- c(5, 23, 70)
+#' age_to_band(z, group_below = 15, group_above = 65, style = "bracket")
+#' age_to_band(z, group_below = 15, group_above = 65, style = "hyphen")
+#'
+#' @export
 age_to_band <- function(x, width = 5, style = "bracket",
                         group_below = NULL, group_above = NULL){
 
@@ -74,7 +117,3 @@ age_to_band <- function(x, width = 5, style = "bracket",
   factor(binned, lvls, lbls, ordered = TRUE)
 
 }
-
-
-
-
