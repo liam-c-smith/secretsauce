@@ -1,0 +1,54 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# secretsauce
+
+Herein lies a motley collection of helper functions that I use in my day-to-day as an analyst in the insurance industry. If you analyse data concerning people and money, you may get some use out of this package too.
+
+**Why *secret sauce*?**
+
+As R packages are often loaded at the start of R scripts, calling `library(secretsauce)` is like garneshing your code with that little something extra... #spicycode
+
+
+## Installation
+
+As secretsauce is primarily for my personal use it is not on CRAN (and probably never will be). Fear not however, you can install it directly from GitHub: 
+``` r
+# install.packages("devtools")
+devtools::install_github("liam-c-smith/secretsauce")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+## basic example code
+```
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+summary(cars)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
