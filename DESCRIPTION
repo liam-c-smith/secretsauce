@@ -1,5 +1,5 @@
 Package: secretsauce
-Title: What the Package Does (One Line, Title Case)
+Title: Top-Secret R Functions
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Liam",
