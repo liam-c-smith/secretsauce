@@ -14,10 +14,10 @@ age_to_band(x, width = 5, style = "bracket", group_below = NULL,
 greater than or equal to 2 for meaningful age bands.}
 
 \item{style}{A string specifying the format of labels assigned to the bins. \code{style
-= "bracket"} provides mathmatical interval notation, e.g. "[5, 10)", whereas
+= "bracket"} provides mathematical interval notation, e.g. "[5, 10)", whereas
 \code{style = "hyphen"} provides integer limits separated by a hyphen, e.g. "5-9".
-While the hyphen-style format is less precise mathmatically, it may be more intuitive
-for audiences without a mathmatical background.}
+While the hyphen-style format is less precise mathematically, it may be more intuitive
+for audiences without a mathematical background.}
 
 \item{group_below, group_above}{An integer specifying end group thresholds. Must be a
 multiple of \code{width}. This is sometimes helpful when younger or older ages should

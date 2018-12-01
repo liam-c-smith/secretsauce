@@ -12,9 +12,9 @@ x \%not_in\% y
 \item{y}{A vector.}
 }
 \value{
-A logical vector of the correpsonding matches.
+A logical vector of the corresponding matches.
 }
 \description{
 Test whether the elements of \code{x} are contained within \code{y}. It is simply a
-wrapper around \code{!(x \%in\% y)} but intended as a more readble alternative.
+wrapper around \code{!(x \%in\% y)} but intended as a more readable alternative.
 }
